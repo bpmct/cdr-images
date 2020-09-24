@@ -30,7 +30,7 @@ RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
     $(lsb_release -cs) \
     stable" \
     && apt-get update \
-    && apt install docker-ce docker-ce-cli containerd.io
+    && apt install -y docker-ce docker-ce-cli containerd.io
 
 
 
