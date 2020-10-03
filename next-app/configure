@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Configurations that depend on the $HOME directory
+
+## Install NVM, but only if it's not already installed
+if [ ! -d $HOME/.nvm ]; then
+  echo "Installing NVM"
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+else
+  echo "NVM is already installed"
+fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+nvm install 10
+nvm use 10
+npm install -g create-next-app
