@@ -21,7 +21,8 @@ RUN apt-get update && DEBIAN_FRONTEND="noninteractive" apt-get install -y \
     curl \
     gnupg-agent \
     software-properties-common \
-    nano
+    nano \
+    unzip
 
 # Install Docker
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - \
@@ -32,7 +33,10 @@ RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
     && apt-get update \
     && apt-get install -y docker-ce docker-ce-cli containerd.io
 
-
+# Install AWS Cli
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+./aws/install
 
 # Add a user `coder` so that you're not developing as the `root` user
 RUN adduser --gecos '' --disabled-password coder && \
