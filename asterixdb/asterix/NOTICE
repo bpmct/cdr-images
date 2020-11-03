@@ -1,0 +1,606 @@
+Apache AsterixDB Server Install
+Copyright 2015-2018 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+
+AsterixDB utilizes many libraries, which come with the following applicable NOTICE(s):
+
+The Netty Project (io.netty:netty:3.6.2.Final)
+- repo/netty-3.6.2.Final.jar
+
+                                  The Netty Project
+                                  =================
+
+      Please visit the Netty web site for more information:
+
+        * http://netty.io/
+
+      Copyright 2011 The Netty Project
+
+      The Netty Project licenses this file to you under the Apache License,
+      version 2.0 (the "License"); you may not use this file except in compliance
+      with the License. You may obtain a copy of the License at:
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+      Unless required by applicable law or agreed to in writing, software
+      distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+      WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+      License for the specific language governing permissions and limitations
+      under the License.
+
+      Also, please refer to each LICENSE.<component>.txt file, which is located in
+      the 'license' directory of the distribution file, for the license terms of the
+      components that this product depends on.
+
+      -------------------------------------------------------------------------------
+      This product contains the extensions to Java Collections Framework which has
+      been derived from the works by JSR-166 EG, Doug Lea, and Jason T. Greene:
+
+        * LICENSE:
+          * license/LICENSE.jsr166y.txt (Public Domain)
+        * HOMEPAGE:
+          * http://gee.cs.oswego.edu/cgi-bin/viewcvs.cgi/jsr166/
+          * http://viewvc.jboss.org/cgi-bin/viewvc.cgi/jbosscache/experimental/jsr166/
+
+      This product contains a modified version of Robert Harder's Public Domain
+      Base64 Encoder and Decoder, which can be obtained at:
+
+        * LICENSE:
+          * license/LICENSE.base64.txt (Public Domain)
+        * HOMEPAGE:
+          * http://iharder.sourceforge.net/current/java/base64/
+
+      This product contains a modified version of 'JZlib', a re-implementation of
+      zlib in pure Java, which can be obtained at:
+
+        * LICENSE:
+          * license/LICENSE.jzlib.txt (BSD Style License)
+        * HOMEPAGE:
+          * http://www.jcraft.com/jzlib/
+
+      This product optionally depends on 'Protocol Buffers', Google's data
+      interchange format, which can be obtained at:
+
+        * LICENSE:
+          * license/LICENSE.protobuf.txt (New BSD License)
+        * HOMEPAGE:
+          * http://code.google.com/p/protobuf/
+
+      This product optionally depends on 'SLF4J', a simple logging facade for Java,
+      which can be obtained at:
+
+        * LICENSE:
+          * license/LICENSE.slf4j.txt (MIT License)
+        * HOMEPAGE:
+          * http://www.slf4j.org/
+
+      This product optionally depends on 'Apache Commons Logging', a logging
+      framework, which can be obtained at:
+
+        * LICENSE:
+          * license/LICENSE.commons-logging.txt (Apache License 2.0)
+        * HOMEPAGE:
+          * http://commons.apache.org/logging/
+
+      This product optionally depends on 'Apache Log4J', a logging framework,
+      which can be obtained at:
+
+        * LICENSE:
+          * license/LICENSE.log4j.txt (Apache License 2.0)
+        * HOMEPAGE:
+          * http://logging.apache.org/log4j/
+
+      This product optionally depends on 'JBoss Logging', a logging framework,
+      which can be obtained at:
+
+        * LICENSE:
+          * license/LICENSE.jboss-logging.txt (GNU LGPL 2.1)
+        * HOMEPAGE:
+          * http://anonsvn.jboss.org/repos/common/common-logging-spi/
+
+      This product optionally depends on 'Apache Felix', an open source OSGi
+      framework implementation, which can be obtained at:
+
+        * LICENSE:
+          * license/LICENSE.felix.txt (Apache License 2.0)
+        * HOMEPAGE:
+          * http://felix.apache.org/
+
+      This product optionally depends on 'Webbit', a Java event based  
+      WebSocket and HTTP server:
+
+        * LICENSE:
+          * license/LICENSE.webbit.txt (BSD License)
+        * HOMEPAGE:
+          * https://github.com/joewalnes/webbit
+
+Couchbase JVM Core IO (com.couchbase.client:core-io:1.3.2)
+- repo/core-io-1.3.2.jar
+jackson-databind (com.fasterxml.jackson.core:jackson-databind:2.8.4)
+- lib/jackson-databind-2.8.4.jar
+- repo/jackson-databind-2.8.4.jar
+
+      # Jackson JSON processor
+
+      Jackson is a high-performance, Free/Open Source JSON processing library.
+      It was originally written by Tatu Saloranta (tatu.saloranta@iki.fi), and has
+      been in development since 2007.
+      It is currently developed by a community of developers, as well as supported
+      commercially by FasterXML.com.
+
+      ## Licensing
+
+      Jackson core and extension components may be licensed under different licenses.
+      To find the details that apply to this artifact see the accompanying LICENSE file.
+      For more information, including possible other licensing options, contact
+      FasterXML.com (http://fasterxml.com).
+
+      ## Credits
+
+      A list of contributors may be found from CREDITS file, which is included
+      in some artifacts (usually source distributions); but is always available
+      from the source code management (SCM) system project uses.
+
+Jackson-core (com.fasterxml.jackson.core:jackson-core:2.8.4)
+- lib/jackson-core-2.8.4.jar
+- repo/jackson-core-2.8.4.jar
+
+      # Jackson JSON processor
+
+      Jackson is a high-performance, Free/Open Source JSON processing library.
+      It was originally written by Tatu Saloranta (tatu.saloranta@iki.fi), and has
+      been in development since 2007.
+      It is currently developed by a community of developers, as well as supported
+      commercially by FasterXML.com.
+
+      ## Licensing
+
+      Jackson core and extension components may licensed under different licenses.
+      To find the details that apply to this artifact see the accompanying LICENSE file.
+      For more information, including possible other licensing options, contact
+      FasterXML.com (http://fasterxml.com).
+
+      ## Credits
+
+      A list of contributors may be found from CREDITS file, which is included
+      in some artifacts (usually source distributions); but is always available
+      from the source code management (SCM) system project uses.
+
+Objenesis (org.objenesis:objenesis:2.6)
+- repo/objenesis-2.6.jar
+
+      // ------------------------------------------------------------------
+      // NOTICE file corresponding to the section 4d of The Apache License,
+      // Version 2.0, in this case for Objenesis
+      // ------------------------------------------------------------------
+
+      Objenesis
+      Copyright 2006-2017 Joe Walnes, Henri Tremblay, Leonardo Mesquita
+
+Apache Avro (org.apache.avro:avro:1.7.5)
+- repo/avro-1.7.5.jar
+
+      Apache Avro
+      Copyright 2009-2013 The Apache Software Foundation
+
+Commons BeanUtils Core (commons-beanutils:commons-beanutils-core:1.8.0)
+- repo/commons-beanutils-core-1.8.0.jar
+
+      Apache Commons BeanUtils
+      Copyright 2000-2008 The Apache Software Foundation
+
+Commons CLI (commons-cli:commons-cli:1.2)
+- repo/commons-cli-1.2.jar
+
+      Apache Commons CLI
+      Copyright 2001-2009 The Apache Software Foundation
+
+Apache Commons Codec (commons-codec:commons-codec:1.9)
+- repo/commons-codec-1.9.jar
+
+      Apache Commons Codec
+      Copyright 2002-2013 The Apache Software Foundation
+
+      src/test/org/apache/commons/codec/language/DoubleMetaphoneTest.java
+      contains test data from http://aspell.net/test/orig/batch0.tab.
+      Copyright (C) 2002 Kevin Atkinson (kevina@gnu.org)
+
+Commons Collections (commons-collections:commons-collections:3.2.1)
+- repo/commons-collections-3.2.1.jar
+
+      Apache Commons Collections
+      Copyright 2001-2008 The Apache Software Foundation
+
+Apache Commons Collections (org.apache.commons:commons-collections4:4.1)
+- repo/commons-collections4-4.1.jar
+
+      Apache Commons Collections
+      Copyright 2001-2015 The Apache Software Foundation
+
+Apache Commons Compress (org.apache.commons:commons-compress:1.15)
+- repo/commons-compress-1.15.jar
+
+      Apache Commons Compress
+      Copyright 2002-2017 The Apache Software Foundation
+
+      The files in the package org.apache.commons.compress.archivers.sevenz
+      were derived from the LZMA SDK, version 9.20 (C/ and CPP/7zip/),
+      which has been placed in the public domain:
+
+      "LZMA SDK is placed in the public domain." (http://www.7-zip.org/sdk.html)
+
+Commons Configuration (commons-configuration:commons-configuration:1.6)
+- repo/commons-configuration-1.6.jar
+
+      Apache Commons Configuration
+      Copyright 2001-2008 The Apache Software Foundation
+
+Commons Daemon (commons-daemon:commons-daemon:1.0.13)
+- repo/commons-daemon-1.0.13.jar
+
+      Apache Commons Daemon
+      Copyright 1999-2013 The Apache Software Foundation
+
+Apache Commons IO (commons-io:commons-io:2.6)
+- lib/commons-io-2.6.jar
+- repo/commons-io-2.6.jar
+
+      Apache Commons IO
+      Copyright 2002-2017 The Apache Software Foundation
+
+Commons Lang (commons-lang:commons-lang:2.4)
+- repo/commons-lang-2.4.jar
+
+      Apache Commons Lang
+      Copyright 2001-2008 The Apache Software Foundation
+
+Apache Commons Lang (org.apache.commons:commons-lang3:3.7)
+- repo/commons-lang3-3.7.jar
+
+      Apache Commons Lang
+      Copyright 2001-2017 The Apache Software Foundation
+
+      This product includes software from the Spring Framework,
+      under the Apache License 2.0 (see: StringUtils.containsWhitespace())
+
+Apache Commons Logging (commons-logging:commons-logging:1.2)
+- repo/commons-logging-1.2.jar
+
+      Apache Commons Logging
+      Copyright 2003-2014 The Apache Software Foundation
+
+Commons Math (org.apache.commons:commons-math:2.1)
+- repo/commons-math-2.1.jar
+
+      Apache Commons Math
+      Copyright 2001-2010 The Apache Software Foundation
+
+      ===============================================================================
+      The LinearConstraint, LinearObjectiveFunction, LinearOptimizer,
+      RelationShip, SimplexSolver and SimplexTableau classes in package
+      org.apache.commons.math.optimization.linear include software developed by
+      Benjamin McCann (http://www.benmccann.com) and distributed with
+      the following copyright: Copyright 2009 Google Inc.
+      ===============================================================================
+
+      This product includes software developed by the
+      University of Chicago, as Operator of Argonne National
+      Laboratory.
+      The LevenbergMarquardtOptimizer class in package
+      org.apache.commons.math.optimization.general includes software
+      translated from the lmder, lmpar and qrsolv Fortran routines
+      from the Minpack package
+      Minpack Copyright Notice (1999) University of Chicago.  All rights reserved
+      ===============================================================================
+
+      The GraggBulirschStoerIntegrator class in package
+      org.apache.commons.math.ode.nonstiff includes software translated
+      from the odex Fortran routine developed by E. Hairer and G. Wanner.
+      Original source copyright:
+      Copyright (c) 2004, Ernst Hairer
+      ===============================================================================
+
+      The EigenDecompositionImpl class in package
+      org.apache.commons.math.linear includes software translated
+      from some LAPACK Fortran routines.  Original source copyright:
+      Copyright (c) 1992-2008 The University of Tennessee.  All rights reserved.
+      ===============================================================================
+
+      The MersenneTwister class in package org.apache.commons.math.random
+      includes software translated from the 2002-01-26 version of
+      the Mersenne-Twister generator written in C by Makoto Matsumoto and Takuji
+      Nishimura. Original source copyright:
+      Copyright (C) 1997 - 2002, Makoto Matsumoto and Takuji Nishimura,
+      All rights reserved
+      ===============================================================================
+
+      The complete text of licenses and disclaimers associated with the the original
+      sources enumerated above at the time of code translation are in the LICENSE.txt
+      file.
+
+Commons Net (commons-net:commons-net:3.1)
+- repo/commons-net-3.1.jar
+
+      Apache Commons Net
+      Copyright 2001-2012 The Apache Software Foundation
+
+Apache Commons Text (org.apache.commons:commons-text:1.2)
+- repo/commons-text-1.2.jar
+
+      Apache Commons Text
+      Copyright 2001-2017 The Apache Software Foundation
+
+Apache HttpClient (org.apache.httpcomponents:httpclient:4.5.2)
+- repo/httpclient-4.5.2.jar
+
+      Apache HttpClient
+      Copyright 1999-2016 The Apache Software Foundation
+
+Apache HttpCore (org.apache.httpcomponents:httpcore:4.4.5)
+- repo/httpcore-4.4.5.jar
+
+      Apache HttpCore
+      Copyright 2005-2016 The Apache Software Foundation
+
+      This project contains annotations derived from JCIP-ANNOTATIONS
+      Copyright (c) 2005 Brian Goetz and Tim Peierls. See http://www.jcip.net
+
+Digester (commons-digester:commons-digester:1.8)
+- repo/commons-digester-1.8.jar
+
+      Apache Jakarta Commons Digester
+      Copyright 2001-2006 The Apache Software Foundation
+
+HttpClient (commons-httpclient:commons-httpclient:3.1)
+- repo/commons-httpclient-3.1.jar
+
+      Apache Jakarta HttpClient
+      Copyright 1999-2007 The Apache Software Foundation
+
+Apache Log4j API (org.apache.logging.log4j:log4j-api:2.10.0)
+- repo/log4j-api-2.10.0.jar
+
+      Apache Log4j API
+      Copyright 1999-2017 The Apache Software Foundation
+
+Apache Log4j Core (org.apache.logging.log4j:log4j-core:2.10.0)
+- repo/log4j-core-2.10.0.jar
+
+      Apache Log4j Core
+      Copyright 1999-2012 Apache Software Foundation
+
+      ResolverUtil.java
+      Copyright 2005-2006 Tim Fennell
+
+Apache Log4j JUL Adapter (org.apache.logging.log4j:log4j-jul:2.10.0)
+- repo/log4j-jul-2.10.0.jar
+
+      Apache Log4j JUL Adapter
+      Copyright 1999-2017 The Apache Software Foundation
+
+Apache Thrift (org.apache.thrift:libthrift:0.9.0)
+- repo/libthrift-0.9.0.jar
+
+      Apache Thrift
+      Copyright 2006-2010 The Apache Software Foundation.
+
+Apache Log4j (log4j:log4j:1.2.17)
+- repo/log4j-1.2.17.jar
+
+      Apache log4j
+      Copyright 2007 The Apache Software Foundation
+
+Google Guice - Core Library (com.google.inject:guice:3.0)
+- repo/guice-3.0.jar
+
+      Google Guice - Core Library
+      Copyright 2006-2011 Google, Inc.
+
+Google Guice - Extensions - Servlet (com.google.inject.extensions:guice-servlet:3.0)
+- repo/guice-servlet-3.0.jar
+
+      Google Guice - Extensions - Servlet
+      Copyright 2006-2011 Google, Inc.
+
+Hive Common (org.apache.hive:hive-common:0.13.0)
+- repo/hive-common-0.13.0.jar
+
+      Hive Common
+      Copyright 2014 The Apache Software Foundation
+
+Hive Serde (org.apache.hive:hive-serde:0.13.0)
+- repo/hive-serde-0.13.0.jar
+
+      Hive Serde
+      Copyright 2014 The Apache Software Foundation
+
+Hive Shims 0.20 (org.apache.hive.shims:hive-shims-0.20:0.13.0)
+- repo/hive-shims-0.20-0.13.0.jar
+
+      Hive Shims 0.20
+      Copyright 2014 The Apache Software Foundation
+
+Hive Shims 0.20S (org.apache.hive.shims:hive-shims-0.20S:0.13.0)
+- repo/hive-shims-0.20S-0.13.0.jar
+
+      Hive Shims 0.20S
+      Copyright 2014 The Apache Software Foundation
+
+Hive Shims 0.23 (org.apache.hive.shims:hive-shims-0.23:0.13.0)
+- repo/hive-shims-0.23-0.13.0.jar
+
+      Hive Shims 0.23
+      Copyright 2014 The Apache Software Foundation
+
+Hive Shims Common (org.apache.hive.shims:hive-shims-common:0.13.0)
+- repo/hive-shims-common-0.13.0.jar
+
+      Hive Shims Common
+      Copyright 2014 The Apache Software Foundation
+
+Hive Shims (org.apache.hive:hive-shims:0.13.0)
+- repo/hive-shims-0.13.0.jar
+
+      Hive Shims
+      Copyright 2014 The Apache Software Foundation
+
+Hive Shims Secure Common (org.apache.hive.shims:hive-shims-common-secure:0.13.0)
+- repo/hive-shims-common-secure-0.13.0.jar
+
+      Hive Shims Secure Common
+      Copyright 2014 The Apache Software Foundation
+
+Data Mapper for Jackson (org.codehaus.jackson:jackson-mapper-asl:1.8.8)
+- repo/jackson-mapper-asl-1.8.8.jar
+JAX-RS provider for JSON content type (org.codehaus.jackson:jackson-jaxrs:1.8.3)
+- repo/jackson-jaxrs-1.8.3.jar
+Jackson (org.codehaus.jackson:jackson-core-asl:1.8.8)
+- repo/jackson-core-asl-1.8.8.jar
+Xml Compatibility extensions for Jackson (org.codehaus.jackson:jackson-xc:1.8.3)
+- repo/jackson-xc-1.8.3.jar
+
+      This product currently only contains code developed by authors
+      of specific components, as identified by the source code files;
+      if such notes are missing files have been created by
+      Tatu Saloranta.
+
+      For additional credits (generally to people who reported problems)
+      see CREDITS file.
+
+Plexus Common Utilities (org.codehaus.plexus:plexus-utils:3.0.24)
+- lib/plexus-utils-3.0.24.jar
+- repo/plexus-utils-3.0.24.jar
+
+      This product includes software developed by the Indiana University 
+        Extreme! Lab (http://www.extreme.indiana.edu/).
+
+      This product includes software developed by 
+      ThoughtWorks (http://www.thoughtworks.com).
+
+      This product includes software developed by 
+      javolution (http://javolution.org/).
+
+      This product includes software developed by 
+      Rome (https://rome.dev.java.net/).
+
+JAXB RI (com.sun.xml.bind:jaxb-impl:2.2.3-1)
+- repo/jaxb-impl-2.2.3-1.jar
+
+      You may obtain JAXB RI in Source Code form code here:
+          https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-impl-2.2.3-1-sources.jar
+
+Java Servlet API (javax.servlet:javax.servlet-api:3.0.1)
+- repo/javax.servlet-api-3.0.1.jar
+
+      You may obtain Java Servlet API in Source Code form code here:
+          https://repo.maven.apache.org/maven2/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1-sources.jar
+
+Java Servlet API (javax.servlet:servlet-api:2.5)
+- repo/servlet-api-2.5.jar
+
+      You may obtain Java Servlet API in Source Code form code here:
+          https://repo.maven.apache.org/maven2/javax/servlet/servlet-api/2.5/servlet-api-2.5-sources.jar
+
+Jersey Test Framework - Core (com.sun.jersey.jersey-test-framework:jersey-test-framework-core:1.9)
+- repo/jersey-test-framework-core-1.9.jar
+
+      You may obtain Jersey Test Framework - Core in Source Code form code here:
+          https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-test-framework/jersey-test-framework-core/1.9/jersey-test-framework-core-1.9-sources.jar
+
+Jersey Test Framework - Grizzly 2 Module (com.sun.jersey.jersey-test-framework:jersey-test-framework-grizzly2:1.9)
+- repo/jersey-test-framework-grizzly2-1.9.jar
+
+      You may obtain Jersey Test Framework - Grizzly 2 Module in Source Code form code here:
+          https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-test-framework/jersey-test-framework-grizzly2/1.9/jersey-test-framework-grizzly2-1.9-sources.jar
+
+gmbal-api-only (org.glassfish.gmbal:gmbal-api-only:3.0.0-b023)
+- repo/gmbal-api-only-3.0.0-b023.jar
+
+      You may obtain gmbal-api-only in Source Code form code here:
+          http://kenai.com/hg/gmbal~master
+
+grizzly-framework (org.glassfish.grizzly:grizzly-framework:2.1.2)
+- repo/grizzly-framework-2.1.2.jar
+
+      You may obtain grizzly-framework in Source Code form code here:
+          https://repo.maven.apache.org/maven2/org/glassfish/grizzly/grizzly-framework/2.1.2/grizzly-framework-2.1.2-sources.jar
+
+grizzly-http (org.glassfish.grizzly:grizzly-http:2.1.2)
+- repo/grizzly-http-2.1.2.jar
+
+      You may obtain grizzly-http in Source Code form code here:
+          https://repo.maven.apache.org/maven2/org/glassfish/grizzly/grizzly-http/2.1.2/grizzly-http-2.1.2-sources.jar
+
+grizzly-http-server (org.glassfish.grizzly:grizzly-http-server:2.1.2)
+- repo/grizzly-http-server-2.1.2.jar
+
+      You may obtain grizzly-http-server in Source Code form code here:
+          https://repo.maven.apache.org/maven2/org/glassfish/grizzly/grizzly-http-server/2.1.2/grizzly-http-server-2.1.2-sources.jar
+
+grizzly-http-servlet (org.glassfish.grizzly:grizzly-http-servlet:2.1.2)
+- repo/grizzly-http-servlet-2.1.2.jar
+
+      You may obtain grizzly-http-servlet in Source Code form code here:
+          https://repo.maven.apache.org/maven2/org/glassfish/grizzly/grizzly-http-servlet/2.1.2/grizzly-http-servlet-2.1.2-sources.jar
+
+grizzly-rcm (org.glassfish.grizzly:grizzly-rcm:2.1.2)
+- repo/grizzly-rcm-2.1.2.jar
+
+      You may obtain grizzly-rcm in Source Code form code here:
+          https://repo.maven.apache.org/maven2/org/glassfish/grizzly/grizzly-rcm/2.1.2/grizzly-rcm-2.1.2-sources.jar
+
+javax.servlet API v.3.0 (org.glassfish:javax.servlet:3.1)
+- repo/javax.servlet-3.1.jar
+
+      You may obtain javax.servlet API v.3.0 in Source Code form code here:
+          https://repo.maven.apache.org/maven2/org/glassfish/javax.servlet/3.1/javax.servlet-3.1-sources.jar
+
+jersey-client (com.sun.jersey:jersey-client:1.9)
+- repo/jersey-client-1.9.jar
+
+      You may obtain jersey-client in Source Code form code here:
+          https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-client/1.9/jersey-client-1.9-sources.jar
+
+jersey-core (com.sun.jersey:jersey-core:1.9)
+- repo/jersey-core-1.9.jar
+
+      You may obtain jersey-core in Source Code form code here:
+          https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-core/1.9/jersey-core-1.9-sources.jar
+
+jersey-grizzly2 (com.sun.jersey:jersey-grizzly2:1.9)
+- repo/jersey-grizzly2-1.9.jar
+
+      You may obtain jersey-grizzly2 in Source Code form code here:
+          https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-grizzly2/1.9/jersey-grizzly2-1.9-sources.jar
+
+jersey-guice (com.sun.jersey.contribs:jersey-guice:1.9)
+- repo/jersey-guice-1.9.jar
+
+      You may obtain jersey-guice in Source Code form code here:
+          https://repo.maven.apache.org/maven2/com/sun/jersey/contribs/jersey-guice/1.9/jersey-guice-1.9-sources.jar
+
+jersey-json (com.sun.jersey:jersey-json:1.9)
+- repo/jersey-json-1.9.jar
+
+      You may obtain jersey-json in Source Code form code here:
+          https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-json/1.9/jersey-json-1.9-sources.jar
+
+jersey-server (com.sun.jersey:jersey-server:1.9)
+- repo/jersey-server-1.9.jar
+
+      You may obtain jersey-server in Source Code form code here:
+          https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-server/1.9/jersey-server-1.9-sources.jar
+
+jsp-api (javax.servlet.jsp:jsp-api:2.1)
+- repo/jsp-api-2.1.jar
+
+      You may obtain jsp-api in Source Code form code here:
+          https://repo.maven.apache.org/maven2/javax/servlet/jsp/jsp-api/2.1/jsp-api-2.1-sources.jar
+
+management-api (org.glassfish.external:management-api:3.0.0-b012)
+- repo/management-api-3.0.0-b012.jar
+
+      You may obtain management-api in Source Code form code here:
+          http://kenai.com/hg/gmbal~gf_common
