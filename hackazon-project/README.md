@@ -13,7 +13,7 @@ These are steps that an admin would have to do to make Hackazon avalible for all
 If you don't have a license, you can get [one for free](https://info.coder.com/coder-sign-up) for up to 10 users. That is great for testing projects like this!
 
 ### Step 1: Add hackazon image
-This is live on the [Docker Hub](https://hub.docker.com/r/bencdr/hackazon-project), or feel free to add it to your own registry.
+Environments are based off Docker images. You can use the one hosted on the Docker Hub [Docker Hub](https://hub.docker.com/r/bencdr/hackazon-project), or customize the [Dockerfile](Dockerfile) and add it to your own registry.
 ![Coder add image screen with bencdr/hackazon as an image](https://user-images.githubusercontent.com/22407953/99199967-ac91f880-2770-11eb-8abf-df3a4e2498a0.png)
 
 ### Step 2: Add MySQL 5.6 image
