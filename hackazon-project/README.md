@@ -17,7 +17,7 @@ Environments are based off Docker images. You can use the one hosted on the [Doc
 ![Coder add image screen with bencdr/hackazon as an image](https://user-images.githubusercontent.com/22407953/99199967-ac91f880-2770-11eb-8abf-df3a4e2498a0.png)
 
 ### Step 2: Add MySQL 5.6 image
-Hackazon requires an older version of MySQL, Coder to the rescue! With containers+cloud workspaces, dealing with dependencies is no longer a problem!
+Hackazon requires an older version of MySQL. Coder to the rescue! With containers & cloud workspaces, dealing with specific dependencies is no longer a problem!
 ![Coder adding MySQL image](https://user-images.githubusercontent.com/22407953/99200160-b49e6800-2771-11eb-824d-9e6b79b5ed6d.png)
 
 ### Step 3: Add the MySQL service
