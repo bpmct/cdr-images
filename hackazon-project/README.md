@@ -25,7 +25,7 @@ Configure a service so that mysql can be attached to hackazon environments.
 ![Coder new service screen](https://user-images.githubusercontent.com/22407953/99200960-88d1b100-2776-11eb-8c27-d6f91965fe06.png)
 
 ### Step 4: Add the XSStrike service (optional)
-Allow users to add XSStrike, a vulnerability detection tool, to their environments. Simply terminal into the service and type `python xsstrike.py` to use the tool. I am using[femtopixel/xsstrike](https://hub.docker.com/r/femtopixel/xsstrike) from the Docker Hub.
+Allow users to add XSStrike, a vulnerability detection tool, to their environments. Simply terminal into the service and type `python xsstrike.py` to use the tool. I am using [femtopixel/xsstrike](https://hub.docker.com/r/femtopixel/xsstrike) from the Docker Hub.
 
 The entrypoint for the service is `/bin/sh` so the user can run XSStrike at will, it does not need to be running in the background.
 
