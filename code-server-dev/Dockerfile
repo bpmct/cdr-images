@@ -4,7 +4,7 @@ FROM codercom/enterprise-base:ubuntu
 # Run everything as root
 USER root
 
-# Install whichever Node version is LTS
+# Install Node 12
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN DEBIAN_FRONTEND="noninteractive" apt-get install -y nodejs
 
