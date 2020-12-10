@@ -5,6 +5,7 @@ FROM codercom/enterprise-base:ubuntu
 USER root
 
 # Install Node 12
+RUN apt-get remove nodejs
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN DEBIAN_FRONTEND="noninteractive" apt-get install -y nodejs
 
