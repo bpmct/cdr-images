@@ -1,4 +1,4 @@
-FROM codercom/enterprise-base:lsblk -f.
+FROM codercom/enterprise-base:ubuntu
 
 # Run everything as root
 USER root
@@ -25,16 +25,20 @@ RUN curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add 
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
 
-# Set back to coder user
-USER coder
-
-# K8s.io KinD
+# Install Kind (from https://github.com/nestybox/dockerfiles/blob/master/kindind/Dockerfile)
 RUN git clone https://github.com/kubernetes-sigs/kind.git /home/coder/kind
-
-USER root
-
-# Install Sysbox
-
-# Build the KinD tool
 COPY build-kind.sh /usr/bin
 RUN chmod +x /usr/bin/build-kind.sh && build-kind.sh && rm /usr/bin/build-kind.sh
+
+# Install Tilt (from https://docs.tilt.dev/install.html#manual-install)
+RUN curl -fsSL https://github.com/tilt-dev/tilt/releases/download/v0.18.8/tilt.0.18.8.linux.x86_64.tar.gz | tar -xzv tilt && mv tilt /usr/local/bin/tilt
+
+# Copy configure script
+COPY configure /coder/configure
+
+# Fix permissions
+RUN chown -R coder:coder /home/coder
+RUN adduser coder sudo
+
+# start as coder user
+USER coder
