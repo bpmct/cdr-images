@@ -4,6 +4,4 @@ if [ -z "$1" ]
     exit
 fi
 
-cd $1
-docker build -t $1
-docker push $1
+docker build $1/ -t bencdr/$1 && docker push bencdr/$1
