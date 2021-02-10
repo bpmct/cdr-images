@@ -6,6 +6,3 @@ fi
 
 # Create a Dev URL for the Java project (doesn't work, requires name)
 # coder urls create $CODER_ENVIRONMENT_NAME 8000
-
-# Start Tilt instantly
-cd "/home/coder/tilt-example-java" && tilt up

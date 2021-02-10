@@ -16,7 +16,7 @@ In Docker Hub: `bencdr/k8s-tilt-example-java:latest`
 ```sh
 $ cd tilt-example-java/4-recommended
 ```
-3. Start developing with tilt
+3. Start developing with Tilt:
 ```sh
 $ tilt up
 ```
