@@ -1,5 +1,7 @@
 # k8s-tilt-example-java
 
+![Tilt Development in Coder](ref/tilt-development.png)
+
 The [k8s-tilt](../k8s-tilt) image extended to support the [tilt-example-java](https://github.com/tilt-dev/tilt-example-java) project in Coder.
 
 In Docker Hub: `bencdr/k8s-tilt-example-java:latest`
@@ -27,5 +29,3 @@ $ tilt up
 ![Create Coder Workspace](ref/coder-create.png)
 
 ![Coder Workspace Screen](ref/workspace-screen.png)
-
-![Tilt Development in Coder](ref/tilt-development.png)
