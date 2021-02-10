@@ -8,4 +8,4 @@ kind create cluster --image=nestybox/kindestnode:v1.18.2
 kubectl cluster-info --context kind-kind
 
 # Create/update tilt Dev URL
-coder urls create $CODER_ENVIRONMENT_NAME 10350 --name tilt
+coder urls create $CODER_ENVIRONMENT_NAME 10350
