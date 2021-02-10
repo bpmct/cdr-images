@@ -7,8 +7,8 @@ In Docker Hub: `bencdr/k8s-tilt-example-java:latest`
 ### Set up Coder workspace
 - run as a CVM
 - at least 4 GB RAM, 2 CPU Cores, and 16GB of disk space
+- add a Dev URL on port 10350 (Tilt Ui)
 - add a Dev URL on port 8000 (Java app)
-- add a  Dev URL on port 
 
 ### Getting started
 1. Open VS Code or IntelliJ IDEA
