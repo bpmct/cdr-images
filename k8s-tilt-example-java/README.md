@@ -20,4 +20,12 @@ $ cd tilt-example-java/4-recommended
 ```sh
 $ tilt up
 ```
-4. Visit your Dev URL on port 10350 to see the Tilt Ui.
+4. Visit your Dev URL on port 10350 to see the Tilt Ui. (Or set up SSH port tunneling to your workspace)
+
+---
+
+![Create Coder Workspace](ref/coder-create.png)
+
+![Coder Workspace Screen](ref/workspace-screen.png)
+
+![Tilt Development in Coder](ref/tilt-development.png)
