@@ -5,4 +5,4 @@ A Coder image that includes [Tilt](https://tilt.dev) + a local Kind cluster. Sim
 Image name: `bencdr/k8s-tilt:latest`
 
 ## Extending
-To add more dependencies for your project, create another image. See the [k8t-tilt-example-java](../k8t-tilt-example-java/Dockerfile) Dockerfile as an example.
+To add more dependencies for your project, create another image. See the [k8s-tilt-example-java](../k8s-tilt-example-java/Dockerfile) Dockerfile as an example.
