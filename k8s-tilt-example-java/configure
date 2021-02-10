@@ -1,0 +1,11 @@
+# Clone the repo if it hasn't been done already
+if [ ! -d "/home/coder/tilt-example-java" ] 
+then
+    git clone https://github.com/tilt-dev/tilt-example-java.git /home/coder/tilt-example-java
+fi
+
+# Create a Dev URL for the Java project (doesn't work, requires name)
+# coder urls create $CODER_ENVIRONMENT_NAME 8000
+
+# Start Tilt instantly
+cd "/home/coder/tilt-example-java" && tilt up
