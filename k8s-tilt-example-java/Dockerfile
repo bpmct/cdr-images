@@ -17,8 +17,9 @@ RUN ln -s /opt/idea/bin/idea.sh /usr/bin/intellij-idea-community
 
 # Copy and run this additional configure script after the first one
 COPY configure /coder/configure-java-example
-RUN echo '# [Imported from k8s-tilt-example-java]' >> "/home/coder/configure"
-RUN echo 'sh /coder/configure-java-example' >> "/home/coder/configure"
+RUN echo '' >> "/coder/configure"
+RUN echo '# [Imported from k8s-tilt-example-java]' >> "/coder/configure"
+RUN echo 'sh /coder/configure-java-example' >> "/coder/configure"
 
 # Set back to coder user
 USER coder
