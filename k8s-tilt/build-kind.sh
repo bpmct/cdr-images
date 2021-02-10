@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# referenced from: https://github.com/nestybox/dockerfiles/blob/master/kindind/build-kind.sh
+
 # start dockerd (needed for building KinD)
 dockerd > /var/log/dockerd.log 2>&1 &
 sleep 3
