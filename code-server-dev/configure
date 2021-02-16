@@ -1,2 +1,2 @@
 # Install CodeTour extension on code-server
-/tmp/coder/code-server/bin/code-server --install-extension vsls-contrib.codetour
+/opt/coder/code-server/bin/code-server --install-extension vsls-contrib.codetour
