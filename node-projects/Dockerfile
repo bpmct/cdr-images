@@ -21,4 +21,7 @@ RUN npm install -g \
     wallpaper-everyday@3.0.0 \
     yo@3.1.1
 
+# Copy configure script
+COPY configure /coder/configure
+
 USER coder
