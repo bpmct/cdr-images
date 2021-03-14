@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# copy the env file into the Coder workspace
+# this is necessary because /home/coder isn't mounted
+# until the right before configure script is run
+# change /home/coder/.env to reflect the project folder
+
+cp /tmp/.env /home/coder/.env
+
+# use the below script instead if you ONLY
+# want to run this if there isn't already a .env file 
+# in that location. 
+
+# (make sure you delete the script above if you use the below one)
+
+# [ -f /home/coder/.env ] && echo ".env file already exists in project. Not copying" || echo "Copying .env..." && cp /tmp/.env /home/coder/.env
+ 
