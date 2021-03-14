@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Install and configure Oh My ZSH (if it is not already installed)
+if [ -d "/home/coder/flask-project" ] 
+then
+    echo "Installing Python dependencies..."
+    "python3 -m pip install -r /home/coder/flask-project/src/requirements.txt"
+else
+    echo "flask-project is not cloned in the home directory"
+fi
+
+echo "Welcome to Coder! 🎉 This environment has docker-compose installed."
