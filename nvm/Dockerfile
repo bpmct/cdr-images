@@ -8,9 +8,6 @@ ENV NVM_DIR=/usr/bin/nvm
 RUN mkdir -p $NVM_DIR
 RUN chown coder:coder $NVM_DIR
 
-# Set the default shell for this workspace
-RUN chsh -s /bin/bash
-
 # Install nvm as the "coder" user
 USER coder
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash \
