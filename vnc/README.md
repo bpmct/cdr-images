@@ -19,3 +19,20 @@ A [sample image](https://github.com/cdr/enterprise-images/tree/main/images/vnc) 
     # You will not see any output if it succeeds, but you
     # will be able to connect your VNC client to localhost:5901
     ```
+    
+## Shell alias
+
+VNC support may be added to the Coder CLI. In the meantime, this alias can be used to VNC into a compatable workspace.
+
+Change the path to your VNC viewer. I used TigerVNC on OSX.
+
+```sh
+coder-vnc() {
+    coder config-ssh
+    local VNC_PORT="${2:-5990}"
+    ssh -N -L "$VNC_PORT:\localhost:$VNC_PORT" coder.$1&
+    sleep 2
+    print "Forwarding VNC to localhost:$VNC_PORT"
+    /Applications/TigerVNC.app/Contents/MacOS/"TigerVNC Viewer" "localhost:$VNC_PORT"
+}
+```
