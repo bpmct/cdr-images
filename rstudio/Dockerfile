@@ -25,7 +25,7 @@ RUN useradd coder \
     --user-group && \
     echo "coder ALL=(ALL) NOPASSWD:ALL" >>/etc/sudoers.d/nopasswd
 
-# give Coder user a password for RStudio
+# give Coder user a passsword for RStudio
 RUN chown -R coder:coder /var/lib/rstudio-server
 RUN echo "server-pid-file=/tmp/rstudio-server.pid" >> /etc/rstudio/rserver.conf
 RUN echo "server-data-dir=/tmp/rstudio" >> /etc/rstudio/rserver.conf
