@@ -4,4 +4,8 @@ if [ -z "$1" ]
     exit
 fi
 
-docker build $1/ -t bencdr/$1 && docker push bencdr/$1
+rem_trailing_slash() {
+    echo "$1" | sed 's/\/*$//g'
+}
+
+docker build $(rem_trailing_slash "$1")/ -t bencdr/$(rem_trailing_slash "$1") && docker push bencdr/$(rem_trailing_slash "$1")
