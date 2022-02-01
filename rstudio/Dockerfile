@@ -31,6 +31,9 @@ RUN echo "server-pid-file=/tmp/rstudio-server.pid" >> /etc/rstudio/rserver.conf
 RUN echo "server-data-dir=/tmp/rstudio" >> /etc/rstudio/rserver.conf
 RUN echo 'coder:rstudio' | chpasswd
 
+# Remove the following line if you do not run Coder on https
+RUN echo "server-add-header=X-Forwarded-Proto: https" >> /etc/rstudio/rserver.conf
+
 # fix locale stuff
 RUN locale-gen en_US.UTF-8
 
