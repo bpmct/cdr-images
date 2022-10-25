@@ -3,7 +3,7 @@ FROM codercom/enterprise-base:ubuntu
 USER root
 
 RUN apt-get update
-RUN apt-get install -y apt-transport-https gnupg
+RUN apt-get install -y apt-transport-https gnupg jq
 
 # Install kubectl
 RUN curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg && \

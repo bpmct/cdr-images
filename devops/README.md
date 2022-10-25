@@ -8,5 +8,6 @@ Coder image with:
 - kubectl
 - helm
 - kubectx
+- jq
 
 Image name in DockerHub: `bencdr/devops:v0.1`
